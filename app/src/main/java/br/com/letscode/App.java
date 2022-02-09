@@ -4,11 +4,10 @@
 package br.com.letscode;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        ReadCsvFile file = new ReadCsvFile("C:\\Users\\samug\\Desktop\\letsCode\\projetosJava\\calculadoraSaldoBancario\\", "operations", "csv");
+        DateOperations data = file.openCsvFile();
     }
 }
