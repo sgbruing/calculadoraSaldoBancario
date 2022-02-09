@@ -17,23 +17,24 @@ public class ReadCsvFile {
     private String location;
     private String extension;
 
-    public operations openCsvFile() {
+    public DateOperations openCsvFile() {
 
         System.out.println("Opening file...");
         String separator = System.getProperty("file.separator");
         String locationName = this.location + separator + this.name + "." + this.extension;
+        DateOperations date = new DateOperations();
 
         try {
             Scanner scan;
             File file;
             String line;
             BankingOperation operation;
-            Date dateline;
-            BankAccount account;
+            Date dateLine;
+            BankAccount bankAccount;
 
             switch (this.extension.toLowerCase()) {
                 case "csv":
-                    file = new File(pathName);
+                    file = new File(locationName);
                     scan = new Scanner(file);
                     line = scan.nextLine();
                     SimpleDateFormat formatterDate =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -43,10 +44,12 @@ public class ReadCsvFile {
                         String[] values = line.split(",");
                         dateLine = formatterDate.parse(values[0].replace("T", " "));
 
+                        bankAccount = new BankAccount(values[1], values[2], values[3], values[4]);
+                        //operation = new BankingOperation(values[5], values[6], Double.parseDouble(values[7]), dateLine, bankAccount);
+
                         System.out.println(values);
 
-                        //implementar conta bancaria
-                        //implementar operação
+                        //date.put(operation);
                     };
                     break;
                 default:
@@ -56,7 +59,7 @@ public class ReadCsvFile {
             error.printStackTrace();
         }
 
-
+        return date;
     }
 
 }

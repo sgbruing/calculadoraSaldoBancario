@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @ToString
 @NoArgsConstructor
 
-public class Operations {
+public class DateOperations {
     Map<String, ArrayList<BankingOperation>> map = new HashMap<>();
 
     public Set<String> keys() { return map.keySet(); }
@@ -22,23 +22,23 @@ public class Operations {
         return map.get(key);
     }
 
-    public ArrayList<BankingOperation> addOrdered(ArrayList<BankingOperation> accountOperations, bankingOperation newOperation) {
+    public ArrayList<BankingOperation> addOrdered(ArrayList<BankingOperation> accountOperations, BankingOperation newOperation) {
         boolean checkEquals;
 
         ArrayList<BankingOperation> orderedList = new ArrayList<>();
-        Date newDate = newOperation.getDataHoraOperacao();
-        long newDate = newDate.getTime();
+        Date newDate = newOperation.getDateHourOperation();
+        long newDateTime = newDate.getTime();
         boolean control = true;
         int i=0;
 
         System.out.println(newOperation);
 
         while (i < accountOperations.size()) {
-            Date itemData = accountOperations.get(i).getDataHoraOperacao();
+            Date itemData = accountOperations.get(i).getDateHourOperation();
             long itemNewDate = itemData.getTime();
             if (control) {
-                if (newDate == itemNewDate) {
-                    checkEquals = accountOperations.get(i).getOperator().equals(newOperation.getOperator()) && accountOperations.get(i).getType().equals(newOperation.getTipo()) && accountOperations.get(i).getValue() == newOperation.getValue();
+                if (newDateTime == itemNewDate) {
+                    checkEquals = accountOperations.get(i).getOperator().equals(newOperation.getOperator()) && accountOperations.get(i).getType().equals(newOperation.getType()) && accountOperations.get(i).getValue() == newOperation.getValue();
                     if (checkEquals) {
                         i = i+1;
                     } else {
@@ -46,11 +46,11 @@ public class Operations {
                         control = false;
                     }
                 }
-                if (newDate > itemNewDate) {
+                if (newDateTime > itemNewDate) {
                     orderedList.add(accountOperations.get(i));
                     i = i+1;
                 }
-                if (newDate < itemNewDate) {
+                if (newDateTime < itemNewDate) {
                     orderedList.add(newOperation);
                     control = false;
                 }
@@ -67,14 +67,14 @@ public class Operations {
 
     public void put(BankingOperation operation){
         ArrayList<BankingOperation> operationsList = new ArrayList<>();
-        String idAccount = operation.getAccount().getId();
+        String idAccount = operation.getBankAccount().getId();
         ArrayList<BankingOperation> accountOperations = map.get(idAccount);
         if (accountOperations == null) {
             operationsList.add(operation);
             map.put(idAccount, operationsList);
         } else {
             operationsList = accountOperations;
-            ArrayList<BankingOperation> orderedList = adicionarOrdenado(operationsList, operacao);
+            ArrayList<BankingOperation> orderedList = addOrdered(operationsList, operation);
             map.put(idAccount, orderedList);
         }
     }
