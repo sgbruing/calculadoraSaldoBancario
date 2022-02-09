@@ -12,9 +12,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 
-public class bankingOperation {
+public class BankingOperation {
     private Date dateHourOperation;
-    private BankAccount bankAccount
+    private BankAccount bankAccount;
     private String operator;
     private String type;
     private double value;
