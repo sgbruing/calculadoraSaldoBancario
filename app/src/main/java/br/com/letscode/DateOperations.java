@@ -31,8 +31,6 @@ public class DateOperations {
         boolean control = true;
         int i=0;
 
-        System.out.println(newOperation);
-
         while (i < accountOperations.size()) {
             Date itemData = accountOperations.get(i).getDateHourOperation();
             long itemNewDate = itemData.getTime();

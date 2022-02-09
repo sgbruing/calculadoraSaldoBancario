@@ -13,8 +13,8 @@ import lombok.AllArgsConstructor;
 @Getter
 @Setter
 public class ReadCsvFile {
-    private String name;
     private String location;
+    private String name;
     private String extension;
 
     public DateOperations openCsvFile() {
@@ -45,11 +45,9 @@ public class ReadCsvFile {
                         dateLine = formatterDate.parse(values[0].replace("T", " "));
 
                         bankAccount = new BankAccount(values[1], values[2], values[3], values[4]);
-                        //operation = new BankingOperation(values[5], values[6], Double.parseDouble(values[7]), dateLine, bankAccount);
+                        operation = new BankingOperation(dateLine, bankAccount, values[5], values[6], Double.parseDouble(values[7]));
 
-                        System.out.println(values);
-
-                        //date.put(operation);
+                        date.put(operation);
                     };
                     break;
                 default:
