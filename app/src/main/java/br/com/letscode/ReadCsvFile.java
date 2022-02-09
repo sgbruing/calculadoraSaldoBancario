@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @Getter
 @Setter
-public class readCsvFile {
+public class ReadCsvFile {
     private String name;
     private String location;
     private String extension;

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f92b2476-c043-4da9-a88f-31520316bfc7" name="Changes" comment="Fisrt implementation readCsvFile">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/operations.java" afterDir="false" />
+    <list default="true" id="f92b2476-c043-4da9-a88f-31520316bfc7" name="Changes" comment="Add bank account class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/bankingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/BankingOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/readCsvFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/ReadCsvFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644285087206</updated>
       <workItem from="1644285088500" duration="744000" />
-      <workItem from="1644364844698" duration="4250000" />
+      <workItem from="1644364844698" duration="9825000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1644285332604</created>
@@ -79,7 +83,28 @@
       <option name="project" value="LOCAL" />
       <updated>1644368881776</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fisrt implementation operations class">
+      <created>1644369148219</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644369148219</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add banking operation class">
+      <created>1644372394337</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644372394337</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add bank account class">
+      <created>1644375230109</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644375230109</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +126,9 @@
     <MESSAGE value="gradle project init" />
     <MESSAGE value="Add operations csv" />
     <MESSAGE value="Fisrt implementation readCsvFile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fisrt implementation readCsvFile" />
+    <MESSAGE value="Fisrt implementation operations class" />
+    <MESSAGE value="Add banking operation class" />
+    <MESSAGE value="Add bank account class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bank account class" />
   </component>
 </project>
