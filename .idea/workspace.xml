@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f92b2476-c043-4da9-a88f-31520316bfc7" name="Changes" comment="Add extracts class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f92b2476-c043-4da9-a88f-31520316bfc7" name="Changes" comment="First implementation extracs class methods">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/Extracts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/letscode/Extracts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/br/com/letscode/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/br/com/letscode/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644285087206</updated>
       <workItem from="1644285088500" duration="744000" />
-      <workItem from="1644364844698" duration="13883000" />
+      <workItem from="1644364844698" duration="14249000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1644285332604</created>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644378938302</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="First implementation extracs class methods">
+      <created>1644380096258</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1644380096258</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +206,7 @@
     <MESSAGE value="Bugs fix" />
     <MESSAGE value="App call readCsvFile methods" />
     <MESSAGE value="Add extracts class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add extracts class" />
+    <MESSAGE value="First implementation extracs class methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="First implementation extracs class methods" />
   </component>
 </project>
