@@ -9,7 +9,6 @@ public class App {
 
         ReadCsvFile file = new ReadCsvFile("C:\\Users\\samug\\Desktop\\letsCode\\projetosJava\\calculadoraSaldoBancario\\", "operations", "csv");
         DateOperations data = file.openCsvFile();
-
         Extracts extracts = new Extracts(data);
         String path = "C:\\Users\\samug\\Desktop\\letsCode\\projetosJava\\calculadoraSaldoBancario\\extracts";
         extracts.makeExtracts(path);
