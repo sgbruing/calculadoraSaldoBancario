@@ -39,39 +39,34 @@ public class Extracts {
 
             FileWriter arquive = new FileWriter(file);
             PrintWriter saveFile = new PrintWriter(arquive);
-
-            saveFile.printf("Banco: "+operations.get(0).getBankAccount().getBank()+"\n");
-            saveFile.printf("Agência: "+operations.get(0).getBankAccount().getAgency()+"\n");
-            saveFile.printf("Conta: ..... "+operations.get(0).getBankAccount().getAccount()+"\n\n");
-            saveFile.printf("Data \t\t\t");
-            saveFile.printf("Tipo \t\t");
-            saveFile.printf("Valor \t\t");
-            saveFile.printf("Operador \n\n");
+            saveFile.printf("Bank: "+operations.get(0).getBankAccount().getBank()+"\n");
+            saveFile.printf("Agency: "+operations.get(0).getBankAccount().getAgency()+"\n");
+            saveFile.printf("Account: ..... "+operations.get(0).getBankAccount().getAccount()+"\n\n");
+            saveFile.printf("Date \t\t\t");
+            saveFile.printf("Type \t\t");
+            saveFile.printf("Value \t\t");
+            saveFile.printf("Operator \n\n");
             System.out.println(operations.get(0).getBankAccount().getBank());
-
             for (BankingOperation item : operations) {
                 date = item.getDateHourOperation().getTime();
                 String dateFormat = "dd-MM-yy HH:mm:ss";
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
                 String dateArquive = simpleDateFormat.format(new Date(date));
                 saveFile.printf(dateArquive+"\t");
-
-                if (item.getType().equals("SAQUE")) {
-                    balance = balance - item.getValue();
-                    saveFile.printf(item.getType() + "\t\t");
-                    saveFile.printf("-%.2f\t\t", item.getValue());
-                }
                 if (item.getType().equals("DEPOSITO")) {
                     balance = balance + item.getValue();
                     saveFile.printf(item.getType() + "\t");;
                     saveFile.printf("+%.2f\t\t", item.getValue());
                 }
-
+                if (item.getType().equals("SAQUE")) {
+                    balance = balance - item.getValue();
+                    saveFile.printf(item.getType() + "\t\t");
+                    saveFile.printf("-%.2f\t\t", item.getValue());
+                }
                 saveFile.printf(item.getOperator()+"\t\n");
-
             }
 
-            saveFile.printf("\nSaldo: ...............................\t");
+            saveFile.printf("\nBalance: \t");
             saveFile.printf(Double.toString(balance));
             arquive.close();
 
